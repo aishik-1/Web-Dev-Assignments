@@ -1,0 +1,15 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build & Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
