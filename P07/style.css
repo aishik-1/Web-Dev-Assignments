@@ -1,0 +1,226 @@
+/* P07: Design Tokens and Typography System in CSS */
+
+:root {
+    /* Color Palette Tokens */
+    --color-primary: #0284c7;
+    --color-primary-dark: #0369a1;
+    --color-primary-light: #e0f2fe;
+    --color-text-main: #0f172a;
+    --color-text-muted: #64748b;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-border: #e2e8f0;
+
+    /* Typographic Hierarchy Tokens */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    
+    --text-xs: 0.75rem;     /* 12px */
+    --text-sm: 0.875rem;    /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg: 1.125rem;    /* 18px */
+    --text-xl: 1.25rem;     /* 20px */
+    --text-2xl: 1.5rem;     /* 24px */
+    --text-3xl: 2rem;       /* 32px */
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.6;
+
+    /* Spacing System Tokens */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2.5rem;     /* 40px */
+
+    /* Border Radius & Shadow Tokens */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-full: 9999px;
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Global Reset with Token Applied */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: var(--font-sans);
+    line-height: var(--line-height-normal);
+    font-size: var(--text-base);
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.header {
+    background-color: var(--color-text-main);
+    color: #ffffff;
+    padding: var(--space-xl) 0;
+    border-bottom: 4px solid var(--color-primary);
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.header-title {
+    font-size: var(--text-3xl);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-xs);
+}
+
+.header-subtitle {
+    color: #94a3b8;
+    font-size: var(--text-lg);
+}
+
+main.container {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.token-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.token-label {
+    display: inline-block;
+    font-size: var(--text-xs);
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+}
+
+.display-1 {
+    font-size: var(--text-3xl);
+    color: var(--color-text-main);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-sm);
+}
+
+.display-2 {
+    font-size: var(--text-2xl);
+    color: var(--color-text-main);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.display-3 {
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.lead-text {
+    font-size: var(--text-lg);
+    color: var(--color-text-main);
+    margin-bottom: var(--space-md);
+    line-height: var(--line-height-normal);
+}
+
+.body-text {
+    font-size: var(--text-base);
+    color: #334155;
+    margin-bottom: var(--space-md);
+}
+
+code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+
+.button-group {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.btn {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #bae6fd;
+}
+
+.token-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.spec-box {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
+.spec-box h4 {
+    font-size: var(--text-sm);
+    color: var(--color-text-main);
+    margin-bottom: var(--space-xs);
+}
+
+.spec-box p {
+    margin-bottom: var(--space-xs);
+}
+
+.footer {
+    background-color: var(--color-text-main);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: var(--space-lg) 0;
+    font-size: var(--text-sm);
+    margin-top: var(--space-xl);
+}

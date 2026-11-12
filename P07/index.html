@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishik Roy - Design Tokens & Typography System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <span class="badge">Design Systems 101</span>
+            <h1 class="header-title">Design Tokens & Typography Spec</h1>
+            <p class="header-subtitle">A standardized token architecture for colors, typographic scales, and spacing units.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="token-card">
+            <span class="token-label">Hierarchy Demo</span>
+            <h1 class="display-1">Heading 1: Display Scale (32px / 2rem)</h1>
+            <h2 class="display-2">Heading 2: Section Header (24px / 1.5rem)</h2>
+            <h3 class="display-3">Heading 3: Component Subtitle (20px / 1.25rem)</h3>
+            <p class="lead-text">Lead Paragraph: Design tokens serve as the single source of truth for visual styles, enabling consistent theming and seamless refactoring across UI components.</p>
+            <p class="body-text">Standard Body Text: By abstracting hardcoded hex codes, pixel margins, and static font sizes into centralized CSS custom properties, web applications achieve high maintainability and scalable design cohesion.</p>
+            
+            <div class="button-group">
+                <button class="btn btn-primary">Primary Token Action</button>
+                <button class="btn btn-secondary">Secondary Variant</button>
+            </div>
+        </section>
+
+        <section class="token-card">
+            <span class="token-label">Token Documentation</span>
+            <h2 class="display-2">Why Implement CSS Custom Properties?</h2>
+            <p class="body-text">CSS variables defined inside the <code>:root</code> selector are globally accessible, reactive, and cascade smoothly down the DOM tree. This approach eliminates magic numbers and decouples component geometry from visual styling.</p>
+            
+            <div class="token-specs">
+                <div class="spec-box">
+                    <h4>Primary Palette</h4>
+                    <p><code>--color-primary: #0284c7</code></p>
+                    <p><code>--color-primary-dark: #0369a1</code></p>
+                </div>
+                <div class="spec-box">
+                    <h4>Surface Tones</h4>
+                    <p><code>--color-surface: #ffffff</code></p>
+                    <p><code>--color-bg: #f8fafc</code></p>
+                </div>
+                <div class="spec-box">
+                    <h4>Spatial Rhythm</h4>
+                    <p><code>--space-sm: 0.5rem (8px)</code></p>
+                    <p><code>--space-md: 1rem (16px)</code></p>
+                    <p><code>--space-lg: 1.5rem (24px)</code></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Aishik Roy &bull; P07 Design Tokens & Typography Practice</p>
+    </footer>
+
+</body>
+</html>
