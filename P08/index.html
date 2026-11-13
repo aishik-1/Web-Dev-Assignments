@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishik Roy - Sticky Navbar & Card Overlay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="nav-brand">Aishik Roy <span>&bull; Dev</span></div>
+            <div class="nav-links">
+                <a href="#hero">Overview</a>
+                <a href="#showcase">Project Overlay</a>
+                <a href="#details">Scroll Test</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+
+        <section id="hero" class="hero-section">
+            <h1>CSS Positioning Masterclass</h1>
+            <p>Exploring <code>position: sticky</code> for viewport-anchored navigation and <code>position: relative</code> + <code>position: absolute</code> for interactive card overlays.</p>
+        </section>
+
+        <section id="showcase" class="card-showcase">
+            <h2>Interactive Overlay Card</h2>
+            <p class="instruction">Hover over the card below to reveal the absolute-positioned overlay details.</p>
+
+            <div class="card-wrapper">
+                <!-- Relative Container -->
+                <div class="project-card">
+                    <div class="card-image-placeholder">
+                        <span class="preview-icon">&lt;/&gt;</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Neural Vision Interface</h3>
+                        <p>Real-time computer vision object detection dashboard built using YOLOv8, OpenCV, and WebSockets.</p>
+                    </div>
+
+                    <!-- Absolute Positioned Overlay -->
+                    <div class="card-overlay">
+                        <h4>Deep Dive Architecture</h4>
+                        <p>Processes 30+ FPS video feeds with sub-50ms latency. Employs async Python backends with client-side canvas rendering.</p>
+                        <a href="#" class="overlay-btn">Inspect Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-image-placeholder">
+                        <span class="preview-icon">&infin;</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>DevPulse Workflow Engine</h3>
+                        <p>Automated sprint analytics and commit velocity tracker designed for engineering student teams.</p>
+                    </div>
+
+                    <div class="card-overlay">
+                        <h4>Key Integrations</h4>
+                        <p>Syncs with GitHub REST API, calculates commit heatmaps, and tracks milestone burndown rates dynamically.</p>
+                        <a href="#" class="overlay-btn">View Metrics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long scroll section to demonstrate sticky positioning -->
+        <section id="details" class="scroll-demo-section">
+            <h2>Sticky Positioning Demonstration</h2>
+            <p>Notice how the top navigation bar remains firmly pinned to the viewport boundary as you scroll past this content.</p>
+            <div class="filler-block">
+                <h3>Scroll Inspection Block 1</h3>
+                <p><code>position: sticky</code> toggles between relative and fixed positioning based on the user's scroll offset relative to its containing block. It requires at least one threshold (such as <code>top: 0</code>) to be declared.</p>
+            </div>
+            <div class="filler-block">
+                <h3>Scroll Inspection Block 2</h3>
+                <p>Card overlay elements make use of <code>position: absolute</code> calculated relative to their closest positioned ancestor (in our case, the parent <code>.project-card</code> with <code>position: relative</code>).</p>
+            </div>
+            <div class="filler-block">
+                <h3>Scroll Inspection Block 3</h3>
+                <p>Combining CSS positioning with transitions enables rich, performant UI patterns without relying on JavaScript event listeners.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Aishik Roy &bull; P08 CSS Positioning Practical</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* P08: Sticky Navbar and Card Overlay Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Sticky Navigation Bar */
+.navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0f172a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid #0284c7;
+}
+
+.navbar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-brand span {
+    color: #38bdf8;
+    font-weight: 400;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* 2. Main Content & Hero */
+.content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+.hero-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.hero-section p {
+    color: #475569;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+code {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* 3. Card Overlay with Relative & Absolute Positioning */
+.card-showcase h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.instruction {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.card-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Parent container: position relative */
+.project-card {
+    position: relative;
+    width: 320px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-placeholder {
+    height: 160px;
+    background: linear-gradient(135deg, #0ea5e9, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-icon {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-family: monospace;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-body h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* Child overlay: position absolute */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-overlay h4 {
+    font-size: 1.1rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+.card-overlay p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.overlay-btn {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.overlay-btn:hover {
+    background-color: #0369a1;
+}
+
+/* 4. Long Scroll Simulation */
+.scroll-demo-section {
+    margin-top: 3.5rem;
+    margin-bottom: 250px; /* Provides extra scroll track */
+}
+
+.scroll-demo-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.filler-block {
+    background-color: #ffffff;
+    border-left: 4px solid #0284c7;
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.filler-block h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
