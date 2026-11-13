@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishik Roy - Responsive Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Responsive Flexbox Navigation Header -->
+    <header class="site-header">
+        <nav class="flex-nav">
+            <div class="brand">
+                <span class="brand-badge">AR</span>
+                <span class="brand-text">Aishik Roy</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section class="intro-banner">
+            <h1>Responsive Flexbox Architecture</h1>
+            <p>Demonstrating fluid navigation bars and dynamic card grids built with CSS Flexbox properties including <code>flex-wrap</code>, <code>justify-content</code>, and responsive media breakpoints.</p>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Project Portfolio Showcase</h2>
+
+            <!-- Flexbox Card Grid -->
+            <div class="flex-grid">
+
+                <article class="flex-card">
+                    <div class="card-status status-active">Active</div>
+                    <h3>Neural Vision Studio</h3>
+                    <p>Computer vision inference pipeline detecting objects in video streams with high accuracy.</p>
+                    <div class="tech-stack">Python &bull; OpenCV &bull; YOLOv8</div>
+                </article>
+
+                <article class="flex-card">
+                    <div class="card-status status-active">Active</div>
+                    <h3>DevPulse Tracker</h3>
+                    <p>Developer analytics dashboard aggregating repository contributions, issues, and code reviews.</p>
+                    <div class="tech-stack">HTML5 &bull; CSS3 &bull; JavaScript</div>
+                </article>
+
+                <article class="flex-card">
+                    <div class="card-status status-completed">Completed</div>
+                    <h3>AlgoLab Visualizer</h3>
+                    <p>Interactive algorithm visualizer explaining pathfinding (Dijkstra, A*) on HTML5 Canvas.</p>
+                    <div class="tech-stack">TypeScript &bull; Canvas API</div>
+                </article>
+
+                <article class="flex-card">
+                    <div class="card-status status-completed">Completed</div>
+                    <h3>CampusConnect</h3>
+                    <p>Collaborative project portal for engineering students sharing academic notes and resources.</p>
+                    <div class="tech-stack">Node.js &bull; Express &bull; MongoDB</div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Aishik Roy &bull; P09 Responsive Flexbox Practical</p>
+    </footer>
+
+</body>
+</html>
