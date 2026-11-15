@@ -1,0 +1,174 @@
+/* P12: Portfolio Projects Grid with Advanced CSS Grid */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Header */
+.header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 3rem 1.5rem;
+    border-bottom: 3px solid #0284c7;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* 2. Advanced CSS Grid Container */
+.grid-container {
+    max-width: 1140px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    grid-auto-flow: dense; /* Compacts gaps smoothly */
+}
+
+/* 3. Card Styling */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #0284c7;
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0284c7;
+    background-color: #e0f2fe;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.spotlight-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.project-card h2 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 0.65rem;
+}
+
+.project-card p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #e2e8f0;
+}
+
+.card-link {
+    align-self: flex-start;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* 4. Advanced Grid Column & Row Spanning */
+.featured-span-col {
+    grid-column: span 2;
+    background: linear-gradient(180deg, #ffffff, #f0f9ff);
+    border: 1.5px solid #bae6fd;
+}
+
+.spotlight-span-row {
+    grid-row: span 2;
+    background: linear-gradient(180deg, #ffffff, #f0fdf4);
+    border: 1.5px solid #bbf7d0;
+}
+
+/* 5. Footer */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 3.5rem;
+}
+
+/* 6. Responsive Fallback */
+@media (max-width: 768px) {
+    .featured-span-col,
+    .spotlight-span-row {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
