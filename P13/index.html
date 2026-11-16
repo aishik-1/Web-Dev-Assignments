@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishik Roy - Choosing Between Flexbox & CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Flexbox Component: 1D Horizontal Navigation Header -->
+    <header class="flex-header">
+        <div class="logo">
+            <span class="badge-icon">AR</span>
+            <span class="logo-text">Aishik Roy</span>
+        </div>
+
+        <nav class="flex-nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#matrix">Comparison</a>
+            <a href="#projects">Grid Showcase</a>
+            <a href="#decision-guide">Decision Guide</a>
+        </nav>
+
+        <div class="flex-actions">
+            <a href="https://github.com/aishik-1" target="_blank" rel="noopener" class="btn-github">GitHub Profile</a>
+        </div>
+    </header>
+
+    <main class="page-body">
+
+        <!-- Intro Hero -->
+        <section id="overview" class="hero-card">
+            <span class="section-tag">Layout Engineering Practice</span>
+            <h1>Architectural Synthesis: Flexbox vs. CSS Grid</h1>
+            <p>Modern frontend engineering does not treat Flexbox and CSS Grid as mutually exclusive options. Instead, high-performance web applications strategically combine both layout engines: deploying Flexbox for linear, one-dimensional content flows and CSS Grid for comprehensive, two-dimensional spatial coordinate systems.</p>
+        </section>
+
+        <!-- 2. CSS Grid Component: 2D Projects Matrix -->
+        <section id="projects" class="showcase-section">
+            <div class="section-header">
+                <h2>Project Catalog (Powered by CSS Grid)</h2>
+                <p>Grid organizes components across both rows and columns simultaneously with guaranteed alignment.</p>
+            </div>
+
+            <div class="grid-catalog">
+                <article class="grid-item">
+                    <div class="item-header">
+                        <h3>Neural Vision Suite</h3>
+                        <!-- Nested Flexbox Component for Tag Pills -->
+                        <div class="flex-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">YOLOv8</span>
+                        </div>
+                    </div>
+                    <p>Sub-millisecond object detection web application delivering bounding box predictions via live WebSockets.</p>
+                </article>
+
+                <article class="grid-item">
+                    <div class="item-header">
+                        <h3>DevPulse Hub</h3>
+                        <div class="flex-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                    <p>Developer velocity tracker summarizing team code commits, issue lifecycles, and milestone completion.</p>
+                </article>
+
+                <article class="grid-item">
+                    <div class="item-header">
+                        <h3>AlgoLab Visualizer</h3>
+                        <div class="flex-tags">
+                            <span class="tag">Canvas</span>
+                            <span class="tag">DSA</span>
+                        </div>
+                    </div>
+                    <p>Educational interactive environment animating pathfinding algorithms and recursive graph traversals.</p>
+                </article>
+
+                <article class="grid-item">
+                    <div class="item-header">
+                        <h3>CampusConnect</h3>
+                        <div class="flex-tags">
+                            <span class="tag">Fullstack</span>
+                            <span class="tag">Mongo</span>
+                        </div>
+                    </div>
+                    <p>Peer-to-peer student project coordination platform for managing course assignments and shared notes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. Analytical Comparison Section -->
+        <section id="matrix" class="comparison-section">
+            <div class="section-header">
+                <h2>Layout Decision Matrix</h2>
+                <p>A reference guide for choosing between Flexbox and CSS Grid in production codebases.</p>
+            </div>
+
+            <!-- CSS Grid for Comparison Cards -->
+            <div class="comparison-grid">
+                <div class="comp-card flex-focus">
+                    <span class="comp-badge">1-Dimensional</span>
+                    <h3>CSS Flexbox</h3>
+                    <p class="comp-role"><strong>Primary Role:</strong> Content-Driven Linear Alignment</p>
+                    <ul class="comp-points">
+                        <li><strong>Axis:</strong> Arranges elements along a single axis (either row OR column).</li>
+                        <li><strong>Philosophy:</strong> "Content-out" sizing &mdash; element sizes adapt based on their inner content.</li>
+                        <li><strong>Best Suited For:</strong> Navbars, form control groupings, horizontal tag lists, vertical centering, media object layouts.</li>
+                        <li><strong>Key Primitives:</strong> <code>flex-direction</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-grow</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="comp-card grid-focus">
+                    <span class="comp-badge">2-Dimensional</span>
+                    <h3>CSS Grid</h3>
+                    <p class="comp-role"><strong>Primary Role:</strong> Structure-Driven Coordinate Systems</p>
+                    <ul class="comp-points">
+                        <li><strong>Axis:</strong> Controls rows AND columns simultaneously within a defined coordinate plane.</li>
+                        <li><strong>Philosophy:</strong> "Layout-in" sizing &mdash; tracks are declared first, elements fit into slots.</li>
+                        <li><strong>Best Suited For:</strong> Whole page scaffolding, newspaper columns, complex card galleries, dashboard layouts with spanning tracks.</li>
+                        <li><strong>Key Primitives:</strong> <code>grid-template-columns</code>, <code>gap</code>, <code>grid-column: span</code>, <code>repeat(auto-fit, ...)</code>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Rule of Thumb Summary -->
+        <section id="decision-guide" class="guide-section">
+            <h3>Quick Architectural Rule of Thumb</h3>
+            <div class="rule-box">
+                <p><strong>Use CSS Grid</strong> when you need to control the overall page structure, define rigid or fluid 2D track boundaries, or require elements to span across multiple rows and columns.</p>
+                <p><strong>Use CSS Flexbox</strong> when you need to align items inside a container, distribute space between buttons or navigation links, or let content determine the natural flow of items in one direction.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. Flexbox Component: Footer Bar -->
+    <footer class="flex-footer">
+        <p>&copy; 2026 Aishik Roy &bull; P13 Flexbox vs CSS Grid Architectural Practical</p>
+        <div class="footer-links">
+            <a href="#overview">Top</a> &bull;
+            <a href="https://github.com/aishik-1/Web-Dev-Assignments-" target="_blank" rel="noopener">Assignments Repository</a>
+        </div>
+    </footer>
+
+</body>
+</html>

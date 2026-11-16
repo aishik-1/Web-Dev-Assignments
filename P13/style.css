@@ -1,0 +1,385 @@
+/* P13: Choosing between Flexbox and Grid for a Shared Layout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   1. FLEXBOX IMPLEMENTATION: 1D Horizontal Navigation Header
+   ============================================================ */
+.flex-header {
+    background-color: #0f172a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0284c7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.badge-icon {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.flex-nav-links {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.flex-nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.flex-nav-links a:hover {
+    color: #38bdf8;
+}
+
+.flex-actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn-github {
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn-github:hover {
+    background-color: #0369a1;
+}
+
+/* ============================================================
+   Main Page Body
+   ============================================================ */
+.page-body {
+    max-width: 1080px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.section-tag {
+    display: inline-block;
+    color: #0284c7;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-card h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.hero-card p {
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.section-header {
+    margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+    font-size: 1.45rem;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.section-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   2. CSS GRID IMPLEMENTATION: 2D Multi-Column Project Matrix
+   ============================================================ */
+.showcase-section {
+    margin-bottom: 3rem;
+}
+
+.grid-catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2D coordinate grid */
+    gap: 1.5rem;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.grid-item h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+/* Nested Flexbox component for badges */
+.flex-tags {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.tag {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+}
+
+.grid-item p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   3. COMPARISON SECTION: Analytical Comparison Grid
+   ============================================================ */
+.comparison-section {
+    margin-bottom: 3rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.comp-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.75rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.flex-focus {
+    border-top: 4px solid #0284c7;
+}
+
+.grid-focus {
+    border-top: 4px solid #059669;
+}
+
+.comp-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.flex-focus .comp-badge {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.grid-focus .comp-badge {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+.comp-card h3 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+}
+
+.comp-role {
+    color: #334155;
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+.comp-points {
+    list-style-type: none;
+}
+
+.comp-points li {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 0.6rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.comp-points li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0284c7;
+    font-size: 0.8rem;
+}
+
+.grid-focus .comp-points li::before {
+    color: #059669;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.88em;
+}
+
+/* ============================================================
+   4. Decision Rule Section
+   ============================================================ */
+.guide-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.75rem;
+    margin-bottom: 3.5rem;
+}
+
+.guide-section h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.rule-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: #f8fafc;
+    border-left: 4px solid #0284c7;
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+
+.rule-box p {
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* ============================================================
+   5. FLEXBOX IMPLEMENTATION: 1D Footer
+   ============================================================ */
+.flex-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   6. Responsive Layout Breakpoints
+   ============================================================ */
+@media (max-width: 768px) {
+    .flex-header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    .flex-nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .grid-catalog {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
