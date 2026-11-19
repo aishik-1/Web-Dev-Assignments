@@ -1,6 +1,4 @@
-/* P13: Choosing between Flexbox and Grid for a Shared Layout */
-
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,10 +10,6 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
 }
-
-/* ============================================================
-   1. FLEXBOX IMPLEMENTATION: 1D Horizontal Navigation Header
-   ============================================================ */
 .flex-header {
     background-color: #0f172a;
     padding: 1rem 2rem;
@@ -85,10 +79,6 @@ body {
 .btn-github:hover {
     background-color: #0369a1;
 }
-
-/* ============================================================
-   Main Page Body
-   ============================================================ */
 .page-body {
     max-width: 1080px;
     margin: 2.5rem auto;
@@ -140,11 +130,6 @@ body {
     color: #64748b;
     font-size: 0.95rem;
 }
-
-/* ============================================================
-   2. CSS GRID IMPLEMENTATION: 2D Multi-Column Project Matrix
-   ============================================================ */
-.showcase-section {
     margin-bottom: 3rem;
 }
 
@@ -202,10 +187,6 @@ body {
     color: #475569;
     font-size: 0.95rem;
 }
-
-/* ============================================================
-   3. COMPARISON SECTION: Analytical Comparison Grid
-   ============================================================ */
 .comparison-section {
     margin-bottom: 3rem;
 }
@@ -215,7 +196,6 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
-
 .comp-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -223,7 +203,6 @@ body {
     border: 1px solid #e2e8f0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
-
 .flex-focus {
     border-top: 4px solid #0284c7;
 }
@@ -298,10 +277,6 @@ code {
     border-radius: 3px;
     font-size: 0.88em;
 }
-
-/* ============================================================
-   4. Decision Rule Section
-   ============================================================ */
 .guide-section {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -330,10 +305,6 @@ code {
     font-size: 0.95rem;
     color: #334155;
 }
-
-/* ============================================================
-   5. FLEXBOX IMPLEMENTATION: 1D Footer
-   ============================================================ */
 .flex-footer {
     background-color: #0f172a;
     color: #94a3b8;
@@ -352,10 +323,6 @@ code {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
-/* ============================================================
-   6. Responsive Layout Breakpoints
-   ============================================================ */
 @media (max-width: 768px) {
     .flex-header {
         flex-direction: column;
@@ -368,7 +335,6 @@ code {
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .grid-catalog {
         grid-template-columns: 1fr;
     }
@@ -376,7 +342,6 @@ code {
     .comparison-grid {
         grid-template-columns: 1fr;
     }
-
     .flex-footer {
         flex-direction: column;
         gap: 0.5rem;
